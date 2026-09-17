@@ -15,3 +15,23 @@
     <item android:alpha="@dimen/m3_ripple_hovered_alpha" android:color="?attr/colorOnSurface" android:state_hovered="true" />
     <item android:alpha="@dimen/m3_ripple_default_alpha" android:color="?attr/colorOnSurface" />
 </selector>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{background:#111;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;font-family:sans-serif;color:white;flex-direction:column}
+.circle{width:100px;height:100px;background:#6ee7b7;border-radius:50%;animation:breathe 4s infinite ease-in-out}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.8)}}
+p{margin-top:40px;opacity:0.7}
+</style>
+</head>
+<body>
+<div class="circle"></div>
+<p id="t">Hít vào...</p>
+<script>
+let texts=["Hít vào...","Giữ lại...","Thở ra...","Thả lỏng..."];
+let i=0;
+setInterval(()=>{document.getElementById('t').innerText=texts[i%4]; i++},1000)
+</script>
+</body>
+</html>
